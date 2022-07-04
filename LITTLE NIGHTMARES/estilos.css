@@ -1,0 +1,196 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Amatic SC';font-size: 22px;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+/*menu*/
+
+label{
+    display: none;
+}
+
+nav{
+    width: 100%;
+    background-color: rgb(237, 214, 41);
+    height: 60px;
+    color: rgb(0, 0, 0);
+    box-shadow: 5px 2px 5px rgba(0,0,0,0.448);
+    font-weight: 700;
+}
+nav #check{
+    display: none;
+}
+.logo{
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 52px;
+}
+.logo img{
+    width: 50px;
+    height: 60px;
+}
+.loh{
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 52px;
+    margin-top: 60px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    padding: 10px;
+    margin-top: 8px;
+}
+nav ul li a{
+    color: rgb(251, 248, 248);
+    font-family: 700;
+}
+nav label{
+    float: right;
+}
+nav label i{
+    font-size: 20px;
+    margin-right: 10px;
+    margin-top: 15px;
+    display: none;
+}
+nav label .fa-brands{
+    display: none;
+}
+.activo, a:hover{
+    background-color: rgb(241, 230, 72);
+    transform: .3s;
+    border-radius: 10px;
+    padding:10px;
+}
+/*responsive*/
+
+@media(max-width: 600px){
+    nav ul li{
+    display: block;
+    margin-left: 20x;
+    color: rgb(0, 0, 0);}
+
+nav #check{
+    display:  none;
+}
+nav ul{
+    float: left;
+    margin-top: 60px;
+    background-color: rgb(241, 230, 72);
+    width: 100%;
+    height: 100vh;
+    margin-top: 0;
+    margin-left: -100%;
+    transition: all ease .5s;
+} 
+nav label .fa-brands{
+    display: block;
+    margin-right: 20px; 
+    cursor: pointer;
+}
+#check:checked ~ ul{
+    margin-left: 0px;
+    transition: all ease .5s;
+}
+}
+/*slider*/
+.contenedor{
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    background: black;
+}
+.slider{
+    width: 800px;
+    margin: auto;
+    overflow: hidden;
+    background: rgb(0, 0, 0);
+    border: 2px solid white;
+}
+.slider ul{
+    padding: 0;
+    display: flex;
+    width: 400%;
+    animation: mover 20s infinite alternate;
+}
+.slider li{
+    list-style: 0;
+    width: 100%;
+}
+
+/*imagen*/
+
+img{
+    width: 1000px;
+    height: 500px;
+    object-fit: cover;
+}
+
+/*animacion*/
+
+@keyframes mover{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{transform: translateX(-1000px);}
+    45%{transform:  translateX(-1000px);}
+
+    50%{transform:  translateX(-2000px);}
+    70%{transform:  translateX(-2000px);}
+
+    75%{transform:  translateX(-3000px);}
+    100%{transform:  translateX(-3000px);}
+}
+
+/*informacion*/
+.text{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+}
+
+.text p{
+    color: white;
+}
+
+.text img{
+    width: 100px;
+    height: 200px;
+}
+/*footer*/
+
+.footer{
+    background: red;
+    height: 200px;
+}
+.footer footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+}
+.footer p{
+transform: translate(-700px);
+color: white;
+}
+.footer i{
+    margin-left: 20px;
+    transform: translate(700px);
+    color: white;
+}
+
